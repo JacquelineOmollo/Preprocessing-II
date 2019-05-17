@@ -1,1 +1,33 @@
 // Mixins in here
+
+@button-color: teal;
+@button-content: "Sign Me Up!";
+
+@y: @button-color;
+@c: @button-content;
+
+.btn(@width, @height, @bg-color, @padding, @color, @fontsize) {
+  width: @width;
+  height: @height;
+  background-color: @bg-color;
+  padding: @padding;
+  color: @color;
+  font-size: @fontsize;
+  border-radius: @border-radius;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+button {
+  .btn(150px, auto, @y, 20px, lighten(@y, 30%), 1.7rem);
+
+  &:after {
+    content: @c;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: darken(@y, 30%);
+    color: @y;
+  }
+}
