@@ -1,36 +1,17 @@
 // Navigation Styles here
 
-header {
-  border-bottom: 2px dashed @navigation-border;
-  margin: 20px 0;
-  padding: 20px 0;
-  padding-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  justify-content: end;
-}
-
-nav {
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
-  margin-left: 62px;
-
-  @media @mobile {
-    margin-left: 0;
-  }
-}
-
 header ul {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+  margin-left: 400px;
+  justify-items: end;
   justify-content: space-around;
 }
 
 header li {
   display: flex;
-  padding: 0 20px 0 20px;
+  padding: 0 23px 30px 23px;
+  font-size: @font-size;
 }
 
 .container-h {
@@ -38,12 +19,6 @@ header li {
   max-width: 800px;
   align-items: center;
   margin: 0 auto;
-
-  .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
 }
 
 @media @mobile {
@@ -53,21 +28,4 @@ header li {
 
 @media @mobile {
   margin-bottom: 20px;
-}
-
-nav {
-  margin-left: 62px;
-
-  @media @mobile {
-    margin-left: 0;
-  }
-
-  a {
-    margin-left: 20px;
-    font-size: 1.8rem;
-  }
-
-  .first-anchor {
-    margin-left: 0;
-  }
 }
