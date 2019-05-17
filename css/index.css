@@ -209,14 +209,13 @@ nav {
 }
 header ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-end;
-  justify-content: space-evenly;
-  padding: 0;
-  margin: 0;
+  justify-content: space-around;
 }
 header li {
-  float: right;
+  display: flex;
+  padding: 0 20px 0 20px;
 }
 .container-h {
   display: flex;
@@ -224,36 +223,33 @@ header li {
   align-items: center;
   margin: 0 auto;
 }
-/* @media @mobile {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  h1 {
-    font-size: 2rem;
-    color: @main-color;
-
-    @media @mobile {
-      margin-bottom: 20px;
-    }
-  }
+.container-h .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (max-width 500px) {
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width 500px) {
+  margin-bottom: 20px;
 }
 nav {
   margin-left: 62px;
-
-  @media @mobile {
+}
+@media (max-width 500px) {
+  nav {
     margin-left: 0;
   }
-
-  a {
-    margin-left: 20px;
-    font-size: 1.8rem;
-  }
-
-  .first-anchor {
-    margin-left: 0;
-  }
-}*/
+}
+nav a {
+  margin-left: 20px;
+  font-size: 1.8rem;
+}
+nav .first-anchor {
+  margin-left: 0;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -311,7 +307,19 @@ nav {
   width: 30%;
   margin-bottom: 30px;
 }
-/*.nav-container .fun-bus div {
-  display: flex;
-  align-items: center;
-}*/
+@media (max-width 500px) {
+  .home {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.pic {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.extra {
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 2px dashed #c0c0c0;
+  padding: 20px;
+}
